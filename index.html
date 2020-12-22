@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Quick Start - Leaflet</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.11.0/leaflet-providers.min.js"
+        integrity="sha512-TO+Wd5hbpDsACTmvzSqAZL83jMQCXGRFNoS4WZxcxrlJBTdgMYaT7g5uX49C5+Kbuxzlg2A+TFJ6UqdsXuOKLw=="
+        crossorigin="anonymous"></script>
+
+    <style>
+        /* css to customize Leaflet default styles  */
+        .leaflet-popup-content-wrapper {
+            width: 600px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div id="mapid" style="width: 100vw; height: 100vh;"></div>
+    <script>
+
+        var mymap = L.map('mapid').setView([51.505, -0.09], 3);
+
+        var data = [
+            { 'Country': 'Soviet Union', 'loc': [61.5240, 105.3188], 'embed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/t8EMx7Y16Vo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
+            { 'Country': 'Greece', 'loc': [39.0742, 21.8243], 'embed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/c84S-EEs9zs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
+            { 'Country': 'Frace', 'loc': [46.2276, 2.2137], 'embed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/wKVMupmQ7eE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
+
+        ]
+
+
+        L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.{ext}', {
+            attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            subdomains: 'abcd',
+            minZoom: 0,
+            maxZoom: 20,
+            ext: 'png'
+        }).addTo(mymap);
+
+        data.forEach(point => {
+            L.marker(point['loc']).addTo(mymap).bindPopup(point['embed']);
+        })
+
+    </script>
+
+
+
+</body>
+
+</html>
