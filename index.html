@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Quick Start - Leaflet</title>
+    <title>The Internationale</title>
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,9 +38,27 @@
         var mymap = L.map('mapid').setView([51.505, -0.09], 3);
 
         var data = [
-            { 'Country': 'Soviet Union', 'loc': [61.5240, 105.3188], 'embed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/t8EMx7Y16Vo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
-            { 'Country': 'Greece', 'loc': [39.0742, 21.8243], 'embed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/c84S-EEs9zs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
-            { 'Country': 'Frace', 'loc': [46.2276, 2.2137], 'embed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/wKVMupmQ7eE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
+            { 'lang': 'Russian', 'loc': [61.5240, 105.3188], 'embed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/t8EMx7Y16Vo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
+            { 'lang': 'Greek', 'loc': [39.0742, 21.8243], 'embed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/c84S-EEs9zs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
+            { 'lang': 'French', 'loc': [46.2276, 2.2137], 'embed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/wKVMupmQ7eE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
+            { 'lang': 'Afrikaans', 'loc': [-33.76576, 18.94257], 'embed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/bAEO-kiyChA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
+            { 'lang': 'Albanian', 'loc': [41.1533, 20.1683], 'embed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/x44KVHPRoeg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
+            { 'lang': 'Amharic', 'loc': [9.1450, 40.4897], 'embed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/BYGZZ6Nqi1I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
+            { 'lang': 'Portugese', 'loc': [39.410733, -8.404541], 'embed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/o1akjX22DUA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
+            { 'lang': 'Moroccan', 'loc': [30.861118, -8.485098], 'embed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/KYQciDBHeUQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
+            { 'lang': 'Ukranian', 'loc': [49.382373, 30.388184], 'embed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/NjKFHgyN7vA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
+            { 'lang': 'Italian', 'loc': [41.827039, 13.606095], 'embed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/IMxVEU4e5Vc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
+            { 'lang': 'German', 'loc': [52.54139, 13.424915], 'embed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/UXKr4HSPHT8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
+            { 'lang': 'Japanese', 'loc': [36.280346, 138.133126], 'embed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/L0td8s6AU_A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
+            { 'lang': 'Norweigian', 'loc': [61.783809, 8.550877], 'embed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/GO3ZDhwhtFA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
+            { 'lang': 'American', 'loc': [39.774769, -95.273438], 'embed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/VUw_aaBjCpE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
+            { 'lang': 'Mexican Spanish', 'loc': [20.96144, -102.304687], 'embed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/lJKZWf682y4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
+            { 'lang': 'Moroccan', 'loc': [30.861118, -8.485098], 'embed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/KYQciDBHeUQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
+            { 'lang': 'Moroccan', 'loc': [30.861118, -8.485098], 'embed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/KYQciDBHeUQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
+            { 'lang': 'Moroccan', 'loc': [30.861118, -8.485098], 'embed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/KYQciDBHeUQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
+            { 'lang': 'Moroccan', 'loc': [30.861118, -8.485098], 'embed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/KYQciDBHeUQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
+            { 'lang': 'Moroccan', 'loc': [30.861118, -8.485098], 'embed': '<iframe width="560" height="315" src="https://www.youtube.com/embed/KYQciDBHeUQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' },
+
 
         ]
 
@@ -56,6 +74,18 @@
         data.forEach(point => {
             L.marker(point['loc']).addTo(mymap).bindPopup(point['embed']);
         })
+
+        var popup = L.popup();
+
+        function onMapClick(e) {
+            popup
+                .setLatLng(e.latlng)
+                .setContent("You clicked the map at " + e.latlng.toString())
+                .openOn(mymap);
+        }
+
+        mymap.on('click', onMapClick);
+
 
     </script>
 
